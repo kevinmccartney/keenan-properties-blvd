@@ -1,2 +1,2 @@
-# Jennifer Keenan Blvd Child Theme
-This child theme utilizes the Boulevard Theme Framework by Home Junction, Inc.
+## Jennifer Keenan Boulevard Child Theme
+> This is a custom child theme built by Kevin McCartney on Behalf of Home Junction Inc. for Jennifer Keenan on the Boulevard framework.
