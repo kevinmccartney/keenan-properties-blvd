@@ -1,0 +1,112 @@
+//takes border from top header
+.banner .top-header {
+    border-bottom: 0px;
+}
+
+//makes the hji users sign-in area full width
+.user-signup-header {
+    width: 100%;
+}
+
+// changes the default behavior of the signin link being
+// $brand-primary
+a.hji-user-signup {
+    color: $brand-third;
+}
+
+//styling for the mobile menu hamburger toggle
+button.navbar-toggle {
+    background-color: $brand-third;
+    border: none;
+}
+
+//hover behavior for the mobile menu hamburger toggle
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: darken($brand-third, 20%);
+}
+
+// reset on header margins
+.banner .header-widgets .blvd-logo,
+.banner .header-widgets .blvd-responsive-menu {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+// centers the logo in the container
+.blvd-logo {
+    @media (min-width: 1200px) {
+        text-align: center;
+    }
+}
+
+img#site-logo {
+    @media (max-width: 767px) {
+        width: 75%;
+    }
+}
+
+// removes the float on the container that holds the actual image so that
+//
+.navbar-brand {
+    float: none;
+}
+
+/*
+ * begin $custom_header_contact
+ *
+*/
+
+.custom-header-contact-wrapper.desktop {
+    display: none;
+    @media (min-width: 1200px) {
+        display: initial;
+        position: absolute;
+        right: 15%;
+        text-align: right;
+        font-weight: 100;
+        font-size: 16px;
+        z-index: 99;
+    }
+}
+
+.custom-header-contact-wrapper.mobile {
+    text-align: center;
+    font-weight: 100;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    @media (min-width: 1200px) {
+        display: none;
+    }
+}
+
+a.custom-contact {
+    color: #fff;
+    transition: ease 0.5s;
+    &:hover,
+    &:active {
+        text-decoration: none;
+        color: $brand-third;
+    }
+}
+
+.fa-custom-social {
+    font-size: 1.5em;
+}
+
+/*
+ * end $custom_header_contact
+*/
+
+.dropdown-menu > li > a {
+    color: #fff;
+    &:hover,
+    &:active {
+        color: $brand-third;
+        background-color: transparent !important;
+    }
+}
+
+ul.dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.65);
+}

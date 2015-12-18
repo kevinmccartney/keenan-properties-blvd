@@ -1,0 +1,68 @@
+// reset on the widget title margins
+.home .widget-title h3 {
+    margin: 4rem auto;
+}
+
+// Pins the slideshow to the bottom of the header, as it should be ;)
+.home .blvd-slideshow {
+    top: initial;
+    border-bottom: 0;
+    &:after {
+        display: none;
+    }
+}
+
+// Pushes the widget row down below the slideshow
+.blvd-home-widgets.row {
+    margin-top: 75rem;
+}
+
+/*
+ * BEGIN $cta-styles
+ * these styles govern the CTAs on the homepage
+*/
+
+.custom-cta-pod {
+    text-align: center;
+    @media (max-width: 991px) {
+        margin-top: 5rem;
+    }
+}
+
+.custom-cta-wrapper {
+    margin-top: 4rem;
+}
+
+a.custom-cta {
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
+}
+
+.custom-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    height: 200px;
+    background-color: black;
+    transition: ease 0.5s;
+    &:hover,
+    &:active {
+        background-color: $brand-primary;
+        h3 {
+            text-shadow: darken($brand-primary, 30%) 5px 5px 10px;
+        }
+    }
+}
+
+h3.custom-cta {
+    color: #fff;
+}
+
+/*
+ * END $cta-styles
+ */

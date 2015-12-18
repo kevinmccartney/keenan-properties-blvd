@@ -1,0 +1,123 @@
+// add our drop shadow effect to all buttons and form elements
+.btn,
+.btn-lg,
+input,
+textarea,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+.idx_call2action,
+.add-to-favorites,
+.tools-panel,
+.selectize-input {
+    @include box-shadow( -3px 3px 0 0 rgba(0, 0, 0, .18) !important );
+    &:active,
+    &:focus,
+    &.focus {
+        @include box-shadow(none !important);
+    }
+}
+
+// rIDX tools panel fixes for child theme design
+.tools-panel {
+    // adjusts border radius for box-shadow above
+    border-radius: $border-radius-base;
+    // removes individual box-shadow from buttons in the .tools-panel
+    .btn,
+    .add-to-favorites {
+        @include box-shadow(none !important);
+    }
+    .btn-primary {
+        line-height: initial;
+    }
+}
+
+// transition all our links
+a {
+    @include transition( all 0.35s ease-in-out );
+}
+
+.so-styled {
+    line-height: 2.5rem;
+}
+
+//takes the underline away from the rIDX property title link
+a.listing-title:hover {
+    text-decoration: none;
+}
+
+.idx-result-snippet-wrapper h4 {
+    color: #fff;
+    &:hover,
+    &:active {
+        color: $brand-third;
+    }
+}
+
+//styling for the the home value widget
+.hji-home-value-form.widget {
+    border: none;
+}
+
+//styling for the rIDX search widget
+.quick-search-widget-wrapper {
+    border: 0px;
+}
+
+//hides spatialmatch map on mobile
+.hjitb.quick-search-widget-wrapper.is-mobile {
+    display: none;
+}
+
+//makes the rIDX listings grid 3/4 width centered on the screen on $screen-xs
+.idx-results {
+    @media (max-width: 767px) {
+        width: 75%;
+        margin: auto;
+    }
+}
+
+.slider-wrapper.loading {
+    height: initial;
+}
+
+.tab-section li.active a {
+    background-color: $brand-primary;
+    color: #fff;
+    text-shadow: darken($brand-primary, 20%) 2px 2px 4px;
+    border: 0;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    background-color: $brand-primary;
+    color: #fff;
+}
+
+// centers the meta slider in the page
+.metaslider.metaslider-nivo {
+    margin: auto;
+}
+
+// centers the caption
+.nivo-caption {
+    text-align: center;
+}
+
+// hides the sharing buttons on all pages but the rIDX listings
+body:not(.ridx-single) {
+    .addtoany_share_save_container {
+        display: none;
+    }
+}
+
+a.adv-options-toggle {
+    color: $brand-third;
+}
+
+#listing-details .main-details .open_house {
+    background-color: transparent;
+    color: $brand-primary !important;
+    font-size: 18px;
+}

@@ -8,8 +8,16 @@
 /* Boulevard Base Import */
 @import "../../../hji-boulevard/assets/scss/base";
 
+/* Import PT Serif */
+@import url("https://fonts.googleapis.com/css?family=PT+Serif");
+
 /* Import Child Theme Variables */
 @import "child-variables";
 
 /* Import Child Theme Stuff */
-@import "main";
+@import "partials/content";
+@import "partials/global";
+@import "partials/header";
+@import "partials/homepage";
+@import "partials/ridx_slider";
+@import "partials/shrinking_header";
