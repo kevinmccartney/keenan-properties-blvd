@@ -1,0 +1,371 @@
+/* ==========================================================================
+  Variables
+  ========================================================================== */
+$brand-primary-light: lighten( $brand-primary, 20% ) !default;
+$brand-primary-dark: darken( $brand-primary, 20% ) !default;
+
+$brand-second-light: lighten( $brand-second, 20% ) !default;
+$brand-second-dark: darken( $brand-second, 20% ) !default;
+
+$brand-third-light: lighten( $brand-third, 20% ) !default;
+$brand-third-dark: darken( $brand-third, 20% ) !default;
+
+
+
+/* ==========================================================================
+  Global
+  ========================================================================== */
+.btn,
+.btn-lg,
+input,
+textarea,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+.idx_call2action,
+.add-to-favorites,
+.tools-panel,
+.selectize-input {
+    // add our drop shadow effect to all buttons and form elements
+    @include box-shadow( -3px 3px 0 0 rgba(0, 0, 0, .18) !important );
+
+    &:active,
+    &:focus,
+    &.focus {
+        @include box-shadow(none !important);
+    }
+}
+
+// rIDX tools panel fixes for child theme design
+.tools-panel {
+    // adjusts border radius for box-shadow above
+    border-radius: $border-radius-base;
+
+    // removes individual box-shadow from buttons in the .tools-panel
+    .btn,
+    .add-to-favorites {
+        @include box-shadow(none !important);
+    }
+    .btn-primary {
+        line-height: initial;
+    }
+}
+
+// transition all our links
+a {
+    @include transition( all 0.35s ease-in-out );
+}
+
+.entry-content {
+    a {
+        text-decoration: underline;
+    }
+}
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+#content {
+    padding: $padding-base-vertical $padding-base-horizontal;
+    @include box-shadow( 0 5px 14px rgba(0,0,0,0.5) );
+
+    // ridx details pages
+    #listing-details {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    // bootstrap tabs
+    .nav-tabs > li {
+        margin-right: .5rem;
+
+        &:not(.active) > a {
+            @include gradient-vertical( $body-bg, change-color( $body-bg, $body-bg, 5% ) );
+            border: 1px solid $nav-tabs-border-color;
+        }
+    }
+
+    // bootstrap tab content
+    .tab-content {
+        border: 1px solid $nav-tabs-border-color;
+        border-top: 0;
+        border-radius: 0 0 $border-radius-base $border-radius-base;
+
+    }
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.content-info {
+    border-top: 4px solid mix($footer-background-color, $brand-primary);
+}
+
+/* ==========================================================================
+  Header
+  ========================================================================== */
+
+
+
+/* ==========================================================================
+  Shrinking Header v2
+  ========================================================================== */
+@media (min-width: $screen-sm-max) {
+    .banner.shrink {
+
+        .navbar-header {
+            width: auto;
+        }
+
+        a.navbar-brand {
+            margin-top: -17px;
+            padding: 0;
+            width: 100%;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            img {
+                width: 80px;
+            }
+        }
+
+        .center-logo {
+            width: 0;
+            img {
+                height: 0;
+                width: 0;
+                -webkit-transition: all 0.5s ease-in-out;
+                -moz-transition: all 0.5s ease-in-out;
+                transition: all 0.5s ease-in-out;
+            }
+        }
+
+        .contact-phone {
+            width: 0;
+            font-size: 0px;
+            padding: 10px 0;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            line-height: inherit;
+        }
+    }
+}
+@media (max-width: $screen-lg-min) {
+    .banner.shrink {
+
+        .navbar-nav > li > a {
+            font-size: 0.8em;
+            line-height: 3em !important;
+        }
+    }
+}
+
+/* ==========================================================================
+Homepage Styles
+========================================================================== */
+.home {
+    // Homepage Slideshow stuff
+    .blvd-slideshow {
+        border-bottom: 2px solid mix($footer-background-color, $brand-primary);
+
+        &:after {
+            content: '';
+            position: absolute;
+            background-color: $footer-background-color;
+            border-top: 2px solid mix($footer-background-color, $brand-primary);
+            width: 100%;
+            height: $padding-small-horizontal;
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    #content {
+        @include box-shadow(none);
+    }
+
+
+    .home-box {
+        @include box-shadow( 4px -3px 10px rgba(0,0,0,0.45) );
+        text-align: center;
+        overflow: hidden;
+
+        &.home-cta-1 {
+            background-color: lighten( $brand-second, 15% );
+            z-index: 4;
+        }
+
+        &.home-cta-2 {
+            background-color: $brand-second;
+            z-index: 3;
+        }
+
+        &.home-cta-3 {
+            background-color: darken( $brand-second, 20% );
+            z-index: 2;
+        }
+
+        &.home-cta-4 {
+            background-color: darken( $brand-second-dark, 25% );
+        }
+
+        // Makes buttons out of semantic markup within cta boxes
+        .home-box-action {
+            display: inline-block;
+            @extend .btn-lg;
+            @extend .btn-primary;
+        }
+    } // end of .actionbox
+
+} // end of .home
+
+/* ==========================================================================
+   rIDX Quick Search Widget - Theme Specific
+   ========================================================================== */
+$qsw-gradient-base-color: change-color( $rIDX-quicksearch-home-bg, $rIDX-quicksearch-home-bg, 25% );
+
+.home .quick-search-widget-wrapper {
+    background-color: $rIDX-quicksearch-home-bg;
+
+    /* IE10 Consumer Preview */
+    background-image: -ms-radial-gradient(center top, ellipse farthest-side, $qsw-gradient-base-color 0%, $rIDX-quicksearch-home-bg 100%);
+
+    /* Mozilla Firefox */
+    background-image: -moz-radial-gradient(center top, ellipse farthest-side, $qsw-gradient-base-color 0%, $rIDX-quicksearch-home-bg 100%);
+
+    /* Opera */
+    background-image: -o-radial-gradient(center top, ellipse farthest-side, $qsw-gradient-base-color 0%, $rIDX-quicksearch-home-bg 100%);
+
+    /* Webkit (Safari/Chrome 10) */
+    background-image: -webkit-gradient(radial, center top, 0, center top, 487, color-stop(0, $qsw-gradient-base-color), color-stop(1, $rIDX-quicksearch-home-bg));
+
+    /* Webkit (Chrome 11+) */
+    background-image: -webkit-radial-gradient(center top, ellipse farthest-side, $qsw-gradient-base-color 0%, $rIDX-quicksearch-home-bg 100%);
+
+    /* W3C Markup, IE10 Release Preview */
+    background-image: radial-gradient(ellipse farthest-side at center top, $qsw-gradient-base-color 0%, $rIDX-quicksearch-home-bg 100%);
+
+    @include box-shadow( 0px -1px 8px 1px rgba(0,0,0,0.5) );
+
+}
+
+/* ==========================================================================
+  Vegas Blvd Theme rIDX Slider
+  ========================================================================== */
+// removes margin from
+.widget_promoted_listings_widget .slider-wrapper {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.widget_promoted_listings_widget .bx-wrapper {
+    max-width: 100% !important;
+
+    .bx-viewport {
+        margin-bottom: 0;
+        height: 270px !important;
+    }
+
+    .idx-result-snippet .idx-result-snippet-wrapper {
+        margin: 0;
+        padding: 0;
+        .listing-top-title {
+            display: none;
+        }
+        .listing-slider-title {
+            display: block;
+        }
+    }
+
+    .idx-grid .idx-result-snippet-wrapper {
+        .photo-wrap {
+            height: 270px !important;
+            min-height: 0 !important;
+            overflow: hidden;
+            img.main-photo {
+                max-width: none;
+                min-height: 0 !important;
+                margin-left: -75px;
+                margin-top: -50px;
+                width: 200% !important;
+            }
+        }
+    }
+
+    .listing-slider-title {
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+    }
+
+    .main-details {
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        background: fade-out( $brand-second, .15 );
+        padding: 5px 10px;
+        width: 100%;
+        height: 100%;
+        transform: rotateX(45deg);
+        transform-origin: center bottom 0;
+        transition: all .1s linear .2s;
+        z-index: 9999;
+
+
+        // Hides the open house flag because there is no room in the slideshow design
+        .open_house_flag {
+            display: none;
+        }
+
+    }
+
+    // Floats slider controls outside slider and removes background image for text
+    @media ( min-width: $screen-md-min ) {
+        .bx-controls {
+            .bx-next, .bx-prev {
+                background: none;
+                display: block;
+                z-index: $zindex-navbar;
+
+                &:before {
+                    font-size: 3em;
+                    line-height: 1em;
+                    text-decoration: none;
+                    text-indent: initial;
+                    display: block;
+                    height: 1em;
+                    width: 1em;
+                    font-family: FontAwesome;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+            .bx-prev {
+                left: -45px;
+                &:before {
+                    content: '\f104';
+                }
+            }
+            .bx-next {
+                right: -60px;
+                &:before {
+                    content: '\f105';
+                }
+            }
+        }
+    }
+} // end of .bx-wrapper
+
+.idx-result-snippet-wrapper:hover {
+    .main-details {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+}

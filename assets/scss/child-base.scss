@@ -1,0 +1,12 @@
+/**
+ * Child-Base.scss
+ * This file loads all the styles we need for our theme.
+ *
+ * There should be no styles in this file, only @imports
+ */
+
+/* Boulevard Base Import */
+@import "../../../hji-boulevard/assets/scss/base";
+
+/* Import Child Theme Stuff */
+@import "main";
