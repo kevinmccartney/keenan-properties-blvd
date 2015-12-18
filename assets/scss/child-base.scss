@@ -8,5 +8,8 @@
 /* Boulevard Base Import */
 @import "../../../hji-boulevard/assets/scss/base";
 
+/* Import Child Theme Variables */
+@import "child-variables";
+
 /* Import Child Theme Stuff */
 @import "main";

@@ -1,7 +1,6 @@
 <?php
 // this is mark-up for the custom copy on the agent roster archive
 ?>
-
 <div class="col-xs-12 custom-agent-content-wrapper">
     <div class="custom-agent-archive-top">
         <div class="col-xs-12 col-sm-6">
@@ -14,5 +13,5 @@
             <p>Our vision, values and agents share one guiding principle: to ensure the highest level of service and expertise powered by innovation, information and good design.</p>
         </div>
     </div>
-  <hr>
+    <hr>
 </div>
