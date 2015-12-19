@@ -57,7 +57,7 @@ echo '<section class="agents-archive">';
                 </div>
                 <input type="hidden" name="property_type" value="agent" />
             </form>
-            FORM;
+FORM;
             // END Search Agent
             // Check if office ID was passed
             if (isset($_GET['office_id']))
@@ -191,6 +191,6 @@ echo '<section class="agents-archive">';
                     {
                 echo '</article>';
                 // this is the custom agent office info.
-                get_template_part( 'partials/agent-page-custom-office-info' );
+                get_template_part( 'templates/partials/agent-page-custom-office-info' );
             echo '</section>'; // class agents-archive
             }

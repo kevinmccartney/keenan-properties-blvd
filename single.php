@@ -3,8 +3,8 @@
   <?php get_template_part( 'templates/entry-single', get_post_type() ); ?>
 </article>
 <?php endwhile; ?>
-<?php if( in_category( array( 24, 14 ) ) ) : ?>
-    get_template_part('templates/custom-buttons');
-    get_template_part('templates/development-navbar');
-<?php endif ?>
+<?php if( in_category( array( 24, 14 ) ) ) {
+        get_template_part('templates/partials/custom-buttons');
+        get_template_part('templates/partials/development-navbar');
+      }
 ?>
