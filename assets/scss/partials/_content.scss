@@ -1,21 +1,25 @@
 body:not(.home) #content {
     margin: 2rem 0px;
-    background-color: #fff;
     padding: 2rem;
+    background-color: $white;
 }
 
-.hji_areas .entry-title,
+.post-423 .page-header,
 .post-1096 .page-header,
 .post-1051 .page-header,
-.post-423 .page-header {
+.hji_areas .entry-title {
     display: none;
 }
 
-.archive .category-available-properties,
-.archive .category-past-projects {
+.archive .category-past-projects,
+.archive .category-available-properties {
     .entry-content {
         display: none;
     }
+}
+
+.bold-brand-color {
+    color: $brand-third;
 }
 
 /*
@@ -29,7 +33,7 @@ img.are-you-ready-hero {
 }
 
 .are-you-ready-copy {
-    font-family: 'PT Serif';
+    font-family: 'PT Serif', Georgia, serif;
     font-size: 2rem;
 }
 
@@ -52,72 +56,72 @@ img.are-you-ready-box-shadow {
 
 .door-cta-wrapper.no-mobile {
     display: none;
-    @media(min-width: $screen-md) {
+    @media (min-width: $screen-md) {
         display: block;
     }
 }
 
 .door-cta-wrapper.mobile {
-    @media(min-width: $screen-md) {
+    @media (min-width: $screen-md) {
         display: none;
     }
 }
 
 .door-cta-background {
+    height: 612px;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url("/wp-content/uploads/3_doors-e1445464951323.jpg");
-    height: 612px;
-    @media(min-width: $screen-lg) {
+    @media (min-width: $screen-lg) {
         height: 743px;
     }
 }
 
 #door-cta-for-lease {
     left: 5rem;
-    @media(min-width: $screen-lg) {
+    @media (min-width: $screen-lg) {
         left: 7rem;
     }
 }
 
 #door-cta-for-sale {
     left: 38rem;
-    @media(min-width: $screen-lg) {
+    @media (min-width: $screen-lg) {
         left: 46.75rem;
     }
 }
 
 #door-cta-open-house {
     right: 4.5rem;
-    @media(min-width: $screen-lg) {
+    @media (min-width: $screen-lg) {
         right: 6rem;
     }
 }
 
 .door-cta-button {
-    font-family: 'Cinzel';
+    font-family: 'Cinzel' Georgia, serif;
 }
 
 .door-cta-button-wrapper.no-mobile {
     display: block;
     padding-top: 20rem;
-    @media(min-width: $screen-lg) {
-        padding-top: 26rem;
-    }
     a.door-cta-button.btn {
         position: absolute;
+        border: 0;
         width: 225px;
         font-size: 3rem;
-        color: $white;
         font-weight: bold;
         letter-spacing: 1px;
         text-transform: uppercase;
+        color: $white;
         background-color: transparent;
-        border: 0;
         box-shadow: none !important;
-        @media(min-width: $screen-lg) {
+        @media (min-width: $screen-lg) {
             width: 250px;
         }
+    }
+    @media (min-width: $screen-lg) {
+        padding-top: 26rem;
     }
 }
 
@@ -126,9 +130,9 @@ img.are-you-ready-box-shadow {
 }
 
 .door-cta-button-pod a {
-    width: 75%;
     margin-bottom: 2rem;
-    @media(min-width: 480px) {
+    width: 75%;
+    @media (min-width: 480px) {
         width: 55%;
     }
 }
@@ -142,15 +146,15 @@ img.are-you-ready-box-shadow {
  */
 
 /*
- * begin $geofarm_styles
+ * BEGIN $geofarm
  * these styles govern the geofarm pages
 */
 
 .hji-areas-featured-image {
     text-align: center;
     img {
-        width: 100%;
         margin: 2rem auto;
+        width: 100%;
     }
 }
 
@@ -160,9 +164,9 @@ img.are-you-ready-box-shadow {
 }
 
 .development-links-wrapper {
-    text-align: center;
     margin: 1rem auto;
     font-size: 18px;
+    text-align: center;
 }
 
 a.development-links {
@@ -170,9 +174,9 @@ a.development-links {
 }
 
 h3.attractions-title {
-    text-align: left;
-    border-bottom: 2px solid;
     margin-bottom: 4rem;
+    border-bottom: 2px solid;
+    text-align: left;
 }
 
 .featured-listings-anchor {
@@ -180,41 +184,46 @@ h3.attractions-title {
 }
 
 .single-hji_areas #wrapper {
-    background-color: #000;
+    background-color: $black;
     #content {
         background: url("/wp-content/uploads/soft_wallpaper.png") repeat scroll 0 0 $white;
     }
 }
 
 /**
- * END $geofarm-styles
+ * END $geofarms
  */
 
-h3.office-info-header {
-    text-align: left;
-    font-family: Open Sans;
-    font-weight: bold;
-    font-size: 21px;
-}
+/*
+ * BEGIN $agent_archive
+ * these styles govern the agent archvive page
+*/
 
-.office-info-pod {
-    border-left: 3px solid $brand-third;
+div#agent-roster-filters {
+    display: none;
 }
 
 .developments-content-wrap {
     text-align: center;
 }
 
-div#agent-roster-filters {
-    display: none;
+img.custom-neighborhood {
+    padding: 1rem;
+}
+
+h3.office-info-header {
+    font-family: Open Sans;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.office-info-pod {
+    border-left: 3px solid $brand-third;
 }
 
 .custom-agent-content-wrapper {
     padding-bottom: 2rem;
-}
-
-img.custom-neighborhood {
-    padding: 1rem;
 }
 
 .office-link-wrapper {
@@ -222,13 +231,6 @@ img.custom-neighborhood {
     font-size: 2rem;
 }
 
-.category-past-projects,
-.category-available-properties {
-    section.entry-meta {
-        display: none;
-    }
-}
-
-.bold-brand-color {
-    color: $brand-third;
-}
+/**
+ * END $agent_archive
+ */
