@@ -1,2 +1,17 @@
+/**
+ * Child Theme Variables
+ * Use this file to override variables in the parent theme
+ */
+
+$brand-primary: #4253c5;
+$brand-second: #000000;
+$brand-third: #6adcb5;
+
+// $brand-primary-light-20: lighten($brand-primary, 20%);
+
+$brand-primary-dark-20: darken($brand-primary, 20%);
+$brand-primary-dark-30: darken($brand-primary, 30%);
+$brand-third-dark-20: darken($brand-third, 20%);
+
 $white: #fff;
 $black: #000;

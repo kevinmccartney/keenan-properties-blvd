@@ -43,7 +43,7 @@ input[type="email"],
 .add-to-favorites,
 .tools-panel,
 .selectize-input {
-    @include box-shadow(-3px 3px 0 0 rgba(0, 0, 0, 0.18) !important);
+    @include box-shadow((-3px) 3px 0 0 rgba(0, 0, 0, 0.18) !important);
     &:active,
     &:focus,
     &.focus {
@@ -74,7 +74,6 @@ a.listing-title:hover {
     }
 }
 
-//makes the rIDX listings grid 3/4 width centered on the screen on $screen-xs
 .idx-results {
     @media (max-width: 767px) {
         margin: auto;
@@ -90,7 +89,7 @@ a.adv-options-toggle {
     border: 0;
     background-color: $brand-primary;
     color: $white;
-    text-shadow: darken($brand-primary, 20%) 2px 2px 4px;
+    text-shadow: $brand-primary-dark-20 2px 2px 4px;
 }
 
 .nav-tabs > li.active > a,
@@ -106,4 +105,8 @@ a.adv-options-toggle {
 
 .nivo-caption {
     text-align: center;
+}
+
+.so-styled {
+    line-height: 2.5rem;
 }

@@ -17,7 +17,7 @@ button.navbar-toggle {
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: darken($brand-third, 20%);
+    background-color: $brand-third-dark-20;
 }
 
 .banner .header-widgets .blvd-logo,

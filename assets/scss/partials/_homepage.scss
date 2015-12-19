@@ -55,7 +55,7 @@ a.custom-cta {
     &:active {
         background-color: $brand-primary;
         h3 {
-            text-shadow: darken($brand-primary, 30%) 5px 5px 10px;
+            text-shadow: $brand-primary-dark-30 5px 5px 10px;
         }
     }
 }
