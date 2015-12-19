@@ -21,14 +21,14 @@
     </div>
 </section>
 <footer>
-<?php wp_link_pages(array('before' => '<nav class="pagination">', 'after' => '</nav>')); ?>
+<?php wp_link_pages( array( 'before' => '<nav class="pagination">', 'after' => '</nav>' ) ); ?>
 <?php
 // no comment section if the posts are in the developments category
 if ( in_category( array( 24, 14 ) ) ) {
     // do nothing
 } else {
     do_action( 'hji_theme_before_comments' );
-    comments_template('/templates/comments.php');
+    comments_template( '/templates/comments.php' );
     do_action( 'hji_theme_after_comments' );
 }
 ?>
