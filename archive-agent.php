@@ -84,7 +84,7 @@ FORM;
                 echo '</header>';
                 echo '<section class="entry-content">';
                     // this is the custom copy that is at the top of the page
-                    get_template_part( 'partials/agent-page-custom-copy' );
+                    get_template_part( 'templates/partials/agent-page-custom-copy' );
                     echo '<div id="agent-roster-filters">';
                         // BEGIN Agent Index (alphabet)
                         $taxonomy = 'agent_index';
