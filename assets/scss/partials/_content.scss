@@ -1,27 +1,3 @@
-body:not(.home) #content {
-    margin: 2rem 0px;
-    padding: 2rem;
-    background-color: $white;
-}
-
-.post-423 .page-header,
-.post-1096 .page-header,
-.post-1051 .page-header,
-.hji_areas .entry-title {
-    display: none;
-}
-
-.archive .category-past-projects,
-.archive .category-available-properties {
-    .entry-content {
-        display: none;
-    }
-}
-
-.bold-brand-color {
-    color: $brand-third;
-}
-
 /*
  * BEGIN $are_you_ready
  * these styles govern the content on the "Are You Ready" page
@@ -188,6 +164,12 @@ h3.attractions-title {
     #content {
         background: url("/wp-content/uploads/soft_wallpaper.png") repeat scroll 0 0 $white;
     }
+}
+
+#listing-details .main-details .open_house {
+    background-color: transparent;
+    color: $brand-primary !important;
+    font-size: 18px;
 }
 
 /**
