@@ -1,92 +1,82 @@
-//takes border from top header
 .banner .top-header {
     border-bottom: 0px;
 }
 
-//makes the hji users sign-in area full width
 .user-signup-header {
     width: 100%;
 }
 
-// changes the default behavior of the signin link being
-// $brand-primary
 a.hji-user-signup {
     color: $brand-third;
 }
 
-//styling for the mobile menu hamburger toggle
 button.navbar-toggle {
-    background-color: $brand-third;
     border: none;
+    background-color: $brand-third;
 }
 
-//hover behavior for the mobile menu hamburger toggle
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
     background-color: darken($brand-third, 20%);
 }
 
-// reset on header margins
 .banner .header-widgets .blvd-logo,
 .banner .header-widgets .blvd-responsive-menu {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 5px 0px;
 }
 
-// centers the logo in the container
 .blvd-logo {
-    @media (min-width: 1200px) {
+    @media (min-width: $screen-lg) {
         text-align: center;
     }
 }
 
-img#site-logo {
-    @media (max-width: 767px) {
+a.navbar-brand {
+    @media (max-width: $screen-sm) {
         width: 75%;
     }
 }
 
-// removes the float on the container that holds the actual image so that
-//
 .navbar-brand {
     float: none;
 }
 
-/*
- * begin $custom_header_contact
- *
-*/
+/**
+ * BEGIN $custom_header_contact
+ */
 
 .custom-header-contact-wrapper.desktop {
     display: none;
-    @media (min-width: 1200px) {
+    @media (min-width: $screen-lg) {
         display: initial;
         position: absolute;
         right: 15%;
-        text-align: right;
+        z-index: 99;
         font-weight: 100;
         font-size: 16px;
-        z-index: 99;
+        text-align: right;
     }
 }
 
 .custom-header-contact-wrapper.mobile {
+    margin-bottom: 1rem;
+    font-size: 16px;
     text-align: center;
     font-weight: 100;
-    font-size: 16px;
-    margin-bottom: 1rem;
-    @media (min-width: 1200px) {
+    @media (min-width: $screen-lg) {
         display: none;
     }
 }
 
 a.custom-contact {
-    color: #fff;
+    color: $white;
+    -webkit-transition: ease 0.5s;
     transition: ease 0.5s;
     &:hover,
-    &:active {
-        text-decoration: none;
+    &:active,
+    &:focus {
         color: $brand-third;
+        text-decoration: none;
     }
 }
 
@@ -94,19 +84,20 @@ a.custom-contact {
     font-size: 1.5em;
 }
 
-/*
- * end $custom_header_contact
-*/
+/**
+ * END $custom_header_contact
+ */
 
 .dropdown-menu > li > a {
-    color: #fff;
+    color: $white;
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
         color: $brand-third;
         background-color: transparent !important;
     }
 }
 
 ul.dropdown-menu {
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba($black, 0.65);
 }
