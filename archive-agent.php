@@ -94,7 +94,7 @@ FORM;
                             $taxonomy = 'agent_index';
                             // Save the terms that have posts in an array as a transient
                             if ( false === ( $alphabet = get_transient( 'archive_alphabet' ) ) ) {
-                            // It wasn't there, so regenerate the data and save the transient
+                                // It wasn't there, so regenerate the data and save the transient
                                 $terms = get_terms( $taxonomy );
                                 $alphabet = array();
                                 if ( $terms ) {
