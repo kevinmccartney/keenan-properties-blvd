@@ -8,11 +8,11 @@
     if ( in_category( array( 24, 14 ) ) ) {
         // do nothing
     } else {
-    if ( has_action( 'hji_theme_featured_media' )  ) {
-        do_action( 'hji_theme_featured_media' );
-    } else {
-        hji_theme_featured_image();
-    }
+        if ( has_action( 'hji_theme_featured_media' )  ) {
+            do_action( 'hji_theme_featured_media' );
+        } else {
+            hji_theme_featured_image();
+        }
     }
     the_content();
     ?>
