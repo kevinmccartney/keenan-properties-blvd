@@ -1,5 +1,5 @@
 <?php
-// this is the office info at the bottom of the agent-archive.php page.
+    /* this is the office info at the bottom of the agent-archive.php page. */
 ?>
 <div class="office-info-wrapper container-fluid">
     <div class="office-info-pod col-xs-12 col-sm-4">

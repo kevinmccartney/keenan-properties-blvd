@@ -5,7 +5,7 @@
 <?php endwhile; ?>
 <?php
 /**
- * grabs the buttons & development sidebar if the post belongs to
+ * grabs the buttons & development navbar if the post belongs to
  * the available or past properties post-type
  */
 if(in_category(array(24, 14))) {

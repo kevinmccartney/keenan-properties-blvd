@@ -1,7 +1,9 @@
+// no borders on the header
 .banner .top-header {
     border-bottom: 0px;
 }
 
+// users is always 100% of the top-header width
 .user-signup-header {
     width: 100%;
 }
@@ -13,11 +15,11 @@ a.hji-user-signup {
 button.navbar-toggle {
     border: none;
     background-color: $brand-third;
-}
-
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-    background-color: $brand-third-dark-20;
+    &:hover,
+    &active,
+    &:focus {
+        background-color: $brand-third-dark-20;
+    }
 }
 
 .banner .header-widgets .blvd-logo,
@@ -31,8 +33,10 @@ button.navbar-toggle {
     }
 }
 
+// removing the float so the logo will center itself
 a.navbar-brand {
     float: none;
+
     @media (max-width: $screen-sm) {
         width: 75%;
     }
@@ -44,6 +48,7 @@ a.navbar-brand {
 
 .custom-header-contact-wrapper.desktop {
     display: none;
+
     @media (min-width: $screen-lg) {
         display: initial;
         position: absolute;
@@ -60,6 +65,7 @@ a.navbar-brand {
     font-size: 16px;
     text-align: center;
     font-weight: 100;
+
     @media (min-width: $screen-lg) {
         display: none;
     }
@@ -73,6 +79,7 @@ a.custom-contact {
     color: $white;
     -webkit-transition: ease 0.5s;
     transition: ease 0.5s;
+
     &:hover,
     &:active,
     &:focus {
@@ -92,6 +99,7 @@ a.custom-contact {
 
 .dropdown-menu > li > a {
     color: $white;
+
     &:hover,
     &:active,
     &:focus {

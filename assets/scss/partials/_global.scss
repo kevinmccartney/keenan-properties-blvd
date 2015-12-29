@@ -1,19 +1,26 @@
+// nicely transition all links
 a {
     @include transition(all 0.35s ease-in-out);
 }
 
+// background & positioning
 body:not(.home) #content {
     margin: 2rem 0px;
     padding: 2rem;
     background-color: $white;
 }
 
+// hide social sharing icons
 body:not(.ridx-single) {
     .addtoany_share_save_container {
         display: none;
     }
 }
-
+// hides the page titles from the following pages
+//  -   are you ready?
+//  -   tips to selling your home
+//  -   find properties
+// as well as any geofarms
 .post-423 .page-header,
 .post-1096 .page-header,
 .post-1051 .page-header,
@@ -21,6 +28,8 @@ body:not(.ridx-single) {
     display: none;
 }
 
+// hiding any post content from the past project & available properties
+// post types on the archive view
 .archive .category-past-projects,
 .archive .category-available-properties {
     .entry-content {
@@ -40,6 +49,7 @@ input[type="email"],
 .tools-panel,
 .selectize-input {
     @include box-shadow((-3px) 3px 0 0 rgba(0, 0, 0, 0.18) !important);
+
     &:active,
     &:focus,
     &.focus {
@@ -49,21 +59,26 @@ input[type="email"],
 
 .tools-panel {
     border-radius: $border-radius-base;
+
     .btn,
     .add-to-favorites {
         @include box-shadow(none !important);
     }
+
     .btn-primary {
         line-height: initial;
     }
 }
 
+// no underline on rIDX snippet title on hover
 a.listing-title:hover {
     text-decoration: none;
 }
 
+// changing color on rIDX snippet title on hover
 .idx-result-snippet-wrapper h4 {
     color: $white;
+
     &:hover,
     &:active,
     &:focus {
@@ -78,10 +93,12 @@ a.listing-title:hover {
     }
 }
 
+// the advanced options toggle in the rIDX search widget
 a.adv-options-toggle {
     color: $brand-third;
 }
 
+// active behavior for bootstrap tabs
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {

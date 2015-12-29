@@ -5,6 +5,7 @@
     }
 }
 
+// changes the arrows above tablet view
 .widget_promoted_listings_widget .bx-wrapper .bx-controls {
     @media (min-width: $screen-md) {
         .bx-next, .bx-prev {
@@ -22,7 +23,7 @@
                 line-height: 1em;
                 text-decoration: none;
                 text-indent: initial;
-                font-family: FontAwesome;
+                font-family: 'FontAwesome';
             }
         }
         .bx-prev {
@@ -40,6 +41,7 @@
     }
 }
 
+// the listings details that are normally hidden until hovered over
 .widget_promoted_listings_widget .bx-wrapper .main-details {
     position: absolute;
     width: 100%;
@@ -55,13 +57,20 @@
     -webkit-transition: all .1s linear .2s;
     transition: all .1s linear .2s;
     z-index: 9999;
+
+    // we don't have space for this
     .open_house_flag {
         display: none;
     }
 }
 
+// transforming main details on hover
 .idx-result-snippet-wrapper:hover .main-details {
     opacity: 1;
     -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
+}
+
+.bx-wrapper .idx-row.listPrice {
+    color: $white;
 }

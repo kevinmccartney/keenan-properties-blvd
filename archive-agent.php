@@ -69,8 +69,8 @@ FORM;
     // END Search Agent
 
     // Check if office ID was passed
-    if (isset($_GET['office_id'])) {
-        $office_name = get_post_meta($_GET['office_id'], '_cmb_office_name', true);
+    if ( isset( $_GET['office_id'] ) ) {
+        $office_name = get_post_meta( $_GET['office_id'], '_cmb_office_name', true );
 
         echo '<header class="header">';
         echo '<h1 class="entry-title">Agents in ' . $office_name . ' Office</h1>';
@@ -101,7 +101,7 @@ FORM;
         $taxonomy = 'agent_index';
 
         // Save the terms that have posts in an array as a transient
-        if (false === ($alphabet = get_transient( 'archive_alphabet' ))) {
+        if ( false === ( $alphabet = get_transient('archive_alphabet') ) ) {
 
             // It wasn't there, so regenerate the data and save the transient
             $terms = get_terms($taxonomy);
@@ -112,7 +112,7 @@ FORM;
                 }
             }
 
-            set_transient('archive_alphabet', $alphabet);
+            set_transient( 'archive_alphabet', $alphabet );
         }
         ?>
 
@@ -121,12 +121,12 @@ FORM;
             <ul id="agent-index">
                 <li class="menu-item"><a href="<?php echo get_post_type_archive_link( 'agent' ); ?>">All</a></li>
                 <?php
-                foreach (range('a', 'z') as $i) {
+                foreach ( range('a', 'z') as $i ) {
                     $current = ( $i == get_query_var($taxonomy) ) ? "current-menu-item" : "menu-item";
-                    if (in_array($i, $alphabet)) {
-                        printf('<li class="az-char %s"><a href="%s">%s</a></li>', $current, get_term_link($i, $taxonomy), strtoupper($i));
+                    if ( in_array($i, $alphabet) ) {
+                        printf( '<li class="az-char %s"><a href="%s">%s</a></li>', $current, get_term_link($i, $taxonomy), strtoupper($i) );
                     } else {
-                        printf('<li class="az-char %s disabled"><a href="javascript: void(0)">%s</a></li>', $current, strtoupper($i));
+                        printf( '<li class="az-char %s disabled"><a href="javascript: void(0)">%s</a></li>', $current, strtoupper($i) );
                     }
                 }
                 ?>
@@ -145,7 +145,7 @@ FORM;
     } else {
         // Check if alphabet filter was initiated
         $agent_index = false;
-        if (isset($wp_query->query_vars['agent_index']) && !empty($wp_query->query_vars['agent_index'])) {
+        if ( isset($wp_query->query_vars['agent_index']) && !empty($wp_query->query_vars['agent_index']) ) {
             $agent_index = $wp_query->query_vars['agent_index'];
         }
         $params['agent_index'] = $agent_index;
@@ -156,7 +156,7 @@ FORM;
     $params = array_merge($default_params, $params);
 
     // Top Producers loop
-    if ((is_tax('agent_index') || !is_tax()) && isset($topProducerSlug) && ($team_query == false)) {
+    if ( (is_tax('agent_index') || !is_tax()) && isset($topProducerSlug) && ($team_query == false) ) {
         $topProducerParams = array(
             'tax_query' => array(
                 array(
@@ -177,8 +177,8 @@ FORM;
     }
 
     // Standard posts loop - render content
-    if ($team_query == false) {
-        if (is_tax() && !is_tax('agent_index')) {
+    if ( $team_query == false ) {
+        if ( is_tax() && !is_tax('agent_index') ) {
             // Regular taxonomy query
             $query = new \WP_Query($default_params);
         } else {
@@ -191,7 +191,7 @@ FORM;
 
     include AGRO_PATH . 'templates/agents-loop.php';
 
-    if ($team_query == false) {
+    if ( $team_query == false ) {
         echo '</article>';
 
         // this is the custom agent office info.

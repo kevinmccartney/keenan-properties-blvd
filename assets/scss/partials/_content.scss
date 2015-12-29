@@ -19,7 +19,8 @@ strong.are-you-ready-bold {
 
 img.are-you-ready-box-shadow {
     box-shadow: #666 10px 10px 20px;
-    @media(max-width: 480px) {
+
+    @media (max-width: 480px) {
         float: none;
     }
 }
@@ -35,6 +36,7 @@ img.are-you-ready-box-shadow {
 
 .door-cta-wrapper.no-mobile {
     display: none;
+
     @media (min-width: $screen-md) {
         display: block;
     }
@@ -50,30 +52,10 @@ img.are-you-ready-box-shadow {
     height: 612px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url("/wp-content/uploads/3_doors-e1445464951323.jpg");
+    background-image: url('/wp-content/uploads/3_doors-e1445464951323.jpg');
+
     @media (min-width: $screen-lg) {
         height: 743px;
-    }
-}
-
-#door-cta-for-lease {
-    left: 5rem;
-    @media (min-width: $screen-lg) {
-        left: 7rem;
-    }
-}
-
-#door-cta-for-sale {
-    left: 38rem;
-    @media (min-width: $screen-lg) {
-        left: 46.75rem;
-    }
-}
-
-#door-cta-open-house {
-    right: 4.5rem;
-    @media (min-width: $screen-lg) {
-        right: 6rem;
     }
 }
 
@@ -84,6 +66,7 @@ img.are-you-ready-box-shadow {
 .door-cta-button-wrapper.no-mobile {
     display: block;
     padding-top: 20rem;
+
     a.door-cta-button.btn {
         position: absolute;
         border: 0;
@@ -95,12 +78,38 @@ img.are-you-ready-box-shadow {
         letter-spacing: 1px;
         text-transform: uppercase;
         box-shadow: none !important;
+
         @media (min-width: $screen-lg) {
             width: 250px;
         }
     }
+
     @media (min-width: $screen-lg) {
         padding-top: 26rem;
+    }
+}
+
+#door-cta-for-lease {
+    left: 5rem;
+
+    @media (min-width: $screen-lg) {
+        left: 7rem;
+    }
+}
+
+#door-cta-for-sale {
+    left: 38rem;
+
+    @media (min-width: $screen-lg) {
+        left: 46.75rem;
+    }
+}
+
+#door-cta-open-house {
+    right: 4.5rem;
+
+    @media (min-width: $screen-lg) {
+        right: 6rem;
     }
 }
 
@@ -111,6 +120,7 @@ img.are-you-ready-box-shadow {
 .door-cta-button-pod a {
     margin-bottom: 2rem;
     width: 75%;
+
     @media (min-width: 480px) {
         width: 55%;
     }
@@ -124,19 +134,21 @@ img.are-you-ready-box-shadow {
  * END $door_cta
  */
 
-/*
+/**
  * BEGIN $geofarm
  * these styles govern the geofarm pages
 */
 
+// ensures imgs are centered in geofarms
 .hji-areas-featured-image {
     text-align: center;
+
     img {
         margin: 2rem auto;
-        width: 100%;
     }
 }
 
+// aligning the photos in the neighborhoods copy
 .custom-neighborhood-pictures,
 .custom-developement-pictures {
     text-align: center;
@@ -152,14 +164,18 @@ h3.attractions-title {
     text-align: left;
 }
 
+// hides the jump to featured listings link
 .featured-listings-anchor {
     display: none;
 }
 
+// changes the body background color of all geofarm pages
 .single-hji_areas #wrapper {
     background-color: $black;
+
+    // changes the content background to be a soft grey image
     #content {
-        background: url("/wp-content/uploads/soft_wallpaper.png") repeat scroll 0 0 $white;
+        background: url('/wp-content/uploads/soft_wallpaper.png') repeat scroll 0 0 $white;
     }
 }
 
@@ -178,6 +194,7 @@ h3.attractions-title {
  * these styles govern the agent archvive page
 */
 
+// hides search bar & agent alphabet search
 div#agent-roster-filters {
     display: none;
 }
@@ -205,7 +222,6 @@ h3.office-info-header {
 /**
  * END $agent_archive
  */
-
 
 // chevernet condos post
 .developments-content-wrap {
