@@ -1,112 +1,112 @@
-// .widget_promoted_listings_widget .slider-wrapper {
-//     margin-top: 1em;
-//     margin-bottom: 1em;
-// }
+.widget_promoted_listings_widget .slider-wrapper {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
 
-// .widget_promoted_listings_widget .bx-wrapper {
-//     max-width: 100% !important;
-//     .bx-viewport {
-//         height: 270px !important;
-//         margin-bottom: 0;
-//     }
-// }
+.widget_promoted_listings_widget .bx-wrapper {
+    max-width: 100% !important;
+    .bx-viewport {
+        height: 270px !important;
+        margin-bottom: 0;
+    }
+}
 
-// .widget_promoted_listings_widget .bx-wrapper .bx-controls {
-//     @media (min-width: $screen-md) {
-//         .bx-next, .bx-prev {
-//             display: block;
-//             z-index: $zindex-navbar;
-//             background: none;
-//             &:before {
-//                 display: block;
-//                 position: absolute;
-//                 height: 1em;
-//                 width: 1em;
-//                 top: 0;
-//                 left: 0;
-//                 font-size: 3em;
-//                 line-height: 1em;
-//                 text-decoration: none;
-//                 text-indent: initial;
-//                 font-family: FontAwesome;
-//             }
-//         }
-//         .bx-prev {
-//             left: -45px;
-//             &:before {
-//                 content: '\f104';
-//             }
-//         }
-//         .bx-next {
-//             right: -60px;
-//             &:before {
-//                 content: '\f105';
-//             }
-//         }
-//     }
-// }
+.widget_promoted_listings_widget .bx-wrapper .bx-controls {
+    @media (min-width: $screen-md) {
+        .bx-next, .bx-prev {
+            display: block;
+            z-index: $zindex-navbar;
+            background: none;
+            &:before {
+                display: block;
+                position: absolute;
+                height: 1em;
+                width: 1em;
+                top: 0;
+                left: 0;
+                font-size: 3em;
+                line-height: 1em;
+                text-decoration: none;
+                text-indent: initial;
+                font-family: FontAwesome;
+            }
+        }
+        .bx-prev {
+            left: -45px;
+            &:before {
+                content: '\f104';
+            }
+        }
+        .bx-next {
+            right: -60px;
+            &:before {
+                content: '\f105';
+            }
+        }
+    }
+}
 
-// .widget_promoted_listings_widget .bx-wrapper .main-details {
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//     top: 0;
-//     left: 0;
-//     overflow: hidden;
-//     opacity: 0;
-//     padding: 5px 10px;
-//     background: fade-out($brand-second, 0.15);
-//     -webkit-transform: rotateX(45deg);
-//     transform: rotateX(45deg);
-//     -webkit-transform-origin: center bottom 0;
-//     transform-origin: center bottom 0;
-//     -webkit-transition: all .1s linear .2s;
-//     transition: all .1s linear .2s;
-//     z-index: 9999;
-//     .open_house_flag {
-//         display: none;
-//     }
-// }
+.widget_promoted_listings_widget .bx-wrapper .main-details {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 5px 10px;
+    background: fade-out($brand-second, 0.15);
+    -webkit-transform: rotateX(45deg);
+    transform: rotateX(45deg);
+    -webkit-transform-origin: center bottom 0;
+    transform-origin: center bottom 0;
+    -webkit-transition: all .1s linear .2s;
+    transition: all .1s linear .2s;
+    z-index: 9999;
+    .open_house_flag {
+        display: none;
+    }
+}
 
-// .widget_promoted_listings_widget .bx-wrapper .listing-slider-title {
-//     overflow: hidden;
-//     font-size: 18px;
-//     font-weight: 700;
-//     text-align: center;
-//     text-overflow: ellipsis;
-//     white-space: nowrap;
-// }
+.widget_promoted_listings_widget .bx-wrapper .listing-slider-title {
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
-// .widget_promoted_listings_widget .bx-wrapper .idx-result-snippet {
-//     .idx-result-snippet-wrapper {
-//         margin: 0;
-//         padding: 0;
-//         .listing-top-title {
-//             display: none;
-//         }
-//         .listing-slider-title {
-//             display: block;
-//         }
-//     }
-// }
+.widget_promoted_listings_widget .bx-wrapper .idx-result-snippet {
+    .idx-result-snippet-wrapper {
+        margin: 0;
+        padding: 0;
+        .listing-top-title {
+            display: none;
+        }
+        .listing-slider-title {
+            display: block;
+        }
+    }
+}
 
-// .widget_promoted_listings_widget .bx-wrapper .idx-grid {
-//     .idx-result-snippet-wrapper .photo-wrap {
-//         height: 270px !important;
-//         min-height: 0 !important;
-//         overflow: hidden;
-//         img.main-photo {
-//             max-width: none;
-//             min-height: 0 !important;
-//             margin-left: -75px;
-//             margin-top: -50px;
-//             width: 200% !important;
-//         }
-//     }
-// }
+.widget_promoted_listings_widget .bx-wrapper .idx-grid {
+    .idx-result-snippet-wrapper .photo-wrap {
+        height: 270px !important;
+        min-height: 0 !important;
+        overflow: hidden;
+        img.main-photo {
+            max-width: none;
+            min-height: 0 !important;
+            margin-left: -75px;
+            margin-top: -50px;
+            width: 200% !important;
+        }
+    }
+}
 
-// .idx-result-snippet-wrapper:hover .main-details {
-//     opacity: 1;
-//     -webkit-transform: rotateX(0deg);
-//     transform: rotateX(0deg);
-// }
+.idx-result-snippet-wrapper:hover .main-details {
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}

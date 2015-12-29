@@ -4,8 +4,8 @@
  *
  * @since Blvd 2.7.0
  */
-if ( !defined( 'HJI_BLVD_SCSS' ) ) {
-    define( 'HJI_BLVD_SCSS', true );
+if (!defined('HJI_BLVD_SCSS')) {
+    define('HJI_BLVD_SCSS', true);
 }
 
 /**
@@ -20,7 +20,7 @@ if (!function_exists('hji_keenan_widgets_init')) {
     add_action('widgets_init', 'hji_keenan_widgets_init', 11);
 }
 
-if ( !function_exists('hji_keenan_load_fonts') ) {
+if (!function_exists('hji_keenan_load_fonts')) {
     function hji_keenan_load_fonts() {
         wp_enqueue_style( 'googleFonts', 'https://fonts.googleapis.com/css?family=PT+Serif');
     }
