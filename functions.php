@@ -27,7 +27,7 @@ if ( !function_exists('hji_keenan_load_fonts') ) {
     function hji_keenan_load_fonts() {
         wp_enqueue_style( 'googleFonts', 'https://fonts.googleapis.com/css?family=PT+Serif' );
     }
-    add_action( 'wp_enquque_scripts', 'hji_keenan_load_fonts' 11);
+    add_action( 'wp_enquque_scripts', 'hji_keenan_load_fonts');
 }
 
 /**
@@ -37,5 +37,5 @@ if (!function_exists('hji_keenan_enqueue_scripts')) {
     function hji_keenan_enqueue_scripts() {
         wp_enqueue_script( 'hji_keenan_scripts', get_stylesheet_directory_uri() . '/assets/js/main.js', array( 'jquery' ), null, true );
     }
-    add_action('wp_enqueue_scripts', 'hji_keenan_enqueue_scripts', 11);
+    add_action('wp_enqueue_scripts', 'hji_keenan_enqueue_scripts');
 }
