@@ -8,6 +8,9 @@
 
 .blvd-home-widgets.row {
     margin-top: 70rem;
+    @media(min-width: $screen-lg) {
+        margin-top: 75rem;
+    }
 }
 
 /*
@@ -68,7 +71,3 @@ h3.custom-cta {
 /*
  * END $cta-styles
  */
-
-.slider-wrapper.loading {
-    // height: initial;
-}
