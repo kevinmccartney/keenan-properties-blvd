@@ -19,6 +19,9 @@ strong.are-you-ready-bold {
 
 img.are-you-ready-box-shadow {
     box-shadow: #666 10px 10px 20px;
+    @media(max-width: 480px) {
+        float: none;
+    }
 }
 
 /**
@@ -75,7 +78,7 @@ img.are-you-ready-box-shadow {
 }
 
 .door-cta-button {
-    font-family: 'Cinzel' Georgia, serif;
+    font-family: 'Cinzel', Georgia, serif;
 }
 
 .door-cta-button-wrapper.no-mobile {
@@ -85,12 +88,12 @@ img.are-you-ready-box-shadow {
         position: absolute;
         border: 0;
         width: 225px;
+        color: $white;
+        background-color: transparent;
         font-size: 3rem;
         font-weight: bold;
         letter-spacing: 1px;
         text-transform: uppercase;
-        color: $white;
-        background-color: transparent;
         box-shadow: none !important;
         @media (min-width: $screen-lg) {
             width: 250px;
@@ -139,14 +142,8 @@ img.are-you-ready-box-shadow {
     text-align: center;
 }
 
-.development-links-wrapper {
-    margin: 1rem auto;
-    font-size: 18px;
-    text-align: center;
-}
-
-a.development-links {
-    padding: 15px;
+img.custom-neighborhood {
+    padding: 1rem;
 }
 
 h3.attractions-title {
@@ -169,7 +166,7 @@ h3.attractions-title {
 #listing-details .main-details .open_house {
     background-color: transparent;
     color: $brand-primary !important;
-    font-size: 18px;
+    font-size: 1.5rem;
 }
 
 /**
@@ -183,14 +180,6 @@ h3.attractions-title {
 
 div#agent-roster-filters {
     display: none;
-}
-
-.developments-content-wrap {
-    text-align: center;
-}
-
-img.custom-neighborhood {
-    padding: 1rem;
 }
 
 h3.office-info-header {
@@ -216,3 +205,25 @@ h3.office-info-header {
 /**
  * END $agent_archive
  */
+
+
+// chevernet condos post
+.developments-content-wrap {
+    text-align: center;
+}
+
+// lofts content
+.so-styled {
+    line-height: 2.5rem;
+}
+
+// developments landing page
+.development-links-wrapper {
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+a.development-links {
+    padding: 15px;
+}

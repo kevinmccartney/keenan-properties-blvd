@@ -32,13 +32,10 @@ button.navbar-toggle {
 }
 
 a.navbar-brand {
+    float: none;
     @media (max-width: $screen-sm) {
         width: 75%;
     }
-}
-
-.navbar-brand {
-    float: none;
 }
 
 /**

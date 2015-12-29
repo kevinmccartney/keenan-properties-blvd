@@ -28,10 +28,6 @@ body:not(.ridx-single) {
     }
 }
 
-.bold-brand-color {
-    color: $brand-third;
-}
-
 .btn,
 .btn-lg,
 input,
@@ -69,13 +65,14 @@ a.listing-title:hover {
 .idx-result-snippet-wrapper h4 {
     color: $white;
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
         color: $brand-third;
     }
 }
 
 .idx-results {
-    @media (max-width: 767px) {
+    @media (min-width: 480px) and (max-width: $screen-sm) {
         margin: auto;
         width: 75%;
     }
@@ -85,28 +82,14 @@ a.adv-options-toggle {
     color: $brand-third;
 }
 
-.tab-section li.active a {
-    border: 0;
-    background-color: $brand-primary;
-    color: $white;
-    text-shadow: $brand-primary-dark-20 2px 2px 4px;
-}
-
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
     background-color: $brand-primary;
     color: $white;
+    text-shadow: $brand-primary-dark-20 2px 2px 4px;
 }
 
-.metaslider.metaslider-nivo {
-    margin: auto;
-}
-
-.nivo-caption {
-    text-align: center;
-}
-
-.so-styled {
-    line-height: 2.5rem;
+.bold-brand-color {
+    color: $brand-third;
 }

@@ -23,7 +23,7 @@
 }
 
 .custom-cta-wrapper {
-    margin-top: 4rem;
+    margin-top: 5rem;
 }
 
 a.custom-cta {
@@ -48,11 +48,12 @@ a.custom-cta {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background-color: black;
+    background-color: $black;
     -webkit-transition: ease 0.5s;
     transition: ease 0.5s;
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
         background-color: $brand-primary;
         h3 {
             text-shadow: $brand-primary-dark-30 5px 5px 10px;
@@ -69,5 +70,5 @@ h3.custom-cta {
  */
 
 .slider-wrapper.loading {
-    height: initial;
+    // height: initial;
 }
