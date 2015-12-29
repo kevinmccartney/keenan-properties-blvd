@@ -1,7 +1,7 @@
 <?php
 // this is the office info at the bottom of the agent-archive.php page.
 ?>
-<div class="office-info-wrapper">
+<div class="office-info-wrapper container-fluid">
     <div class="office-info-pod col-xs-12 col-sm-4">
         <h3 class="office-info-header">Downtown/Midtown</h3>
         1312 Live Oak Street<br>

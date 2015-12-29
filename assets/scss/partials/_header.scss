@@ -53,7 +53,7 @@ a.navbar-brand {
         right: 15%;
         z-index: 99;
         font-weight: 100;
-        font-size: 16px;
+        font-size: 18px;
         text-align: right;
     }
 }
@@ -66,6 +66,10 @@ a.navbar-brand {
     @media (min-width: $screen-lg) {
         display: none;
     }
+}
+
+.custom-header-social-wrapper {
+    font-size: 2rem;
 }
 
 a.custom-contact {
@@ -81,6 +85,7 @@ a.custom-contact {
 }
 
 .fa-custom-social {
+    padding: 0px 5px;
     font-size: 1.5em;
 }
 
