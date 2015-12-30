@@ -69,7 +69,7 @@ function blogBeautifier() {
 jQuery(document).ready(function() {
     agentSizer();
     typefill();
-    blogBeautifier()
+    blogBeautifier();
 });
 
 jQuery(window).resize(function() {
