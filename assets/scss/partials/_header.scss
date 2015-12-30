@@ -12,13 +12,17 @@ a.hji-user-signup {
     color: $brand-third;
 }
 
-button.navbar-toggle {
+header .header-widgets .blvd-logo button.navbar-toggle {
     border: none;
     background-color: $brand-third;
     &:hover,
     &active,
     &:focus {
         background-color: $brand-third-dark-20;
+    }
+    
+    @media(max-width: $screen-xs) {
+        margin-bottom: 1rem !important;    
     }
 }
 

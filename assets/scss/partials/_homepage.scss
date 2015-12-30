@@ -9,10 +9,10 @@
 
 // pushing content below slideshow
 .blvd-home-widgets.row {
-    margin-top: 70rem;
+    margin-top: 80rem;
 
     @media (min-width: $screen-lg) {
-        margin-top: 75rem;
+        margin-top: 70rem;
     }
 }
 
@@ -27,10 +27,6 @@
     @media (max-width: 991px) {
         margin-top: 5rem;
     }
-}
-
-.custom-cta-wrapper {
-    margin-top: 5rem;
 }
 
 a.custom-cta {

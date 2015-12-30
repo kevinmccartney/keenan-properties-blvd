@@ -1,10 +1,3 @@
-.widget_promoted_listings_widget .bx-wrapper {
-    max-width: 100% !important;
-    .bx-viewport {
-        height: 270px !important;
-    }
-}
-
 // changes the arrows above tablet view
 .widget_promoted_listings_widget .bx-wrapper .bx-controls {
     @media (min-width: $screen-md) {
