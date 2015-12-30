@@ -10,11 +10,11 @@ function agentSizer() {
             agentImgHeightArr = [];
 
         agentImg.each(function(index) {
-            jQuery(this).css('height', 'initial');
             agentImgHeightArr.push(jQuery(this).outerHeight(true));
         });
 
         agentBox.each(function(index) {
+            jQuery(this).css('height', 'initial');
             agentBoxHeightArr.push(jQuery(this).outerHeight(true));
         });
 
@@ -52,9 +52,24 @@ function typefill() {
     }
 }
 
+/**
+ * Appends a small string indicating that the excerpt continues to all 
+ * post excerpts in an archive
+ */
+function blogBeautifier() {
+    if( jQuery('body').hasClass('archive') ) {
+        var archiveEntryButton = jQuery('article.type-post .entry-content .read-more-link');
+
+        jQuery(archiveEntryButton).each(function(index) {
+            jQuery(this).before(' [...]');
+        });
+    }
+}
+
 jQuery(document).ready(function() {
     agentSizer();
     typefill();
+    blogBeautifier()
 });
 
 jQuery(window).resize(function() {
