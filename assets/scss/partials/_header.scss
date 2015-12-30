@@ -21,6 +21,7 @@ header .header-widgets .blvd-logo button.navbar-toggle {
         background-color: $brand-third-dark-20;
     }
     
+    // so the button doesn't sit directly on top of the logo
     @media(max-width: $screen-xs) {
         margin-bottom: 1rem !important;    
     }
@@ -31,6 +32,7 @@ header .header-widgets .blvd-logo button.navbar-toggle {
     margin-top: 5px 0px;
 }
 
+// so the logo is centered
 .blvd-logo {
     @media (min-width: $screen-lg) {
         text-align: center;
@@ -50,6 +52,7 @@ a.navbar-brand {
  * BEGIN $custom_header_contact
  */
 
+// this contact info is visbile above $screen-md
 .custom-header-contact-wrapper.desktop {
     display: none;
 
@@ -64,6 +67,7 @@ a.navbar-brand {
     }
 }
 
+// this contact info is visbile below $screen-md
 .custom-header-contact-wrapper.mobile {
     margin-bottom: 1rem;
     font-size: 16px;
@@ -101,17 +105,18 @@ a.custom-contact {
  * END $custom_header_contact
  */
 
-.dropdown-menu > li > a {
-    color: $white;
-
-    &:hover,
-    &:active,
-    &:focus {
-        color: $brand-third;
-        background-color: transparent !important;
-    }
-}
-
 ul.dropdown-menu {
     background-color: rgba($black, 0.65);
+    
+    // hover behavior on menu dropdown items
+    li > a {
+        color: $white;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $brand-third;
+            background-color: transparent !important;
+        }
+    }
 }
