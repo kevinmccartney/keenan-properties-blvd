@@ -10,7 +10,7 @@ body:not(.home) #content {
     background-color: $white;
 }
 
-// hide social sharing icons
+// hide social sharing icons except on rIDX single listings
 body:not(.ridx-single) {
     .addtoany_share_save_container {
         display: none;
@@ -70,19 +70,16 @@ input[type="email"],
     }
 }
 
-// no underline on rIDX snippet title on hover
-a.listing-title:hover {
-    text-decoration: none;
-}
-
-// changing color on rIDX snippet title on hover
-.idx-result-snippet-wrapper h4 {
-    color: $white;
-
+// titles for the individual rIDX snippets
+a.listing-title {
     &:hover,
     &:active,
     &:focus {
-        color: $brand-third;
+        text-decoration: none;
+    }
+    h4 {
+        color: $black;
+        @include pretty_hover(none, $brand-third, ease 0.35s);
     }
 }
 

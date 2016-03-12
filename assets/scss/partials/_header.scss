@@ -48,11 +48,25 @@ a.navbar-brand {
     }
 }
 
+// ensuring the logo does not overflow its container
+img#site-logo {
+    max-width: 95%;
+    @media(max-width: 480px) {
+        margin-top: 1rem;
+    }
+}
+
+.blvd-responsive-menu .navbar-nav {
+    @media(max-width: $grid-float-breakpoint) {
+        margin-bottom: 2rem;
+    }
+}
+
 /**
  * BEGIN $custom_header_contact
  */
 
-// this contact info is visbile above $screen-md
+// this contact info is visible above $screen-md
 .custom-header-contact-wrapper.desktop {
     display: none;
 

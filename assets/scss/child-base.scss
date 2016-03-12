@@ -5,9 +5,10 @@
 @import "child-variables";
 
 /* Import Child Theme Stuff */
+@import "partials/bx_slider";
+@import "partials/child-globals";
 @import "partials/content";
 @import "partials/footer";
-@import "partials/global";
 @import "partials/header";
 @import "partials/homepage";
-@import "partials/ridx_slider";
+

@@ -164,10 +164,10 @@ img.custom-neighborhood {
     padding: 1rem;
 }
 
-h3.attractions-title {
-    margin-bottom: 4rem;
-    border-bottom: 2px solid;
+.attractions-title {
+    margin-bottom: 2rem;
     text-align: left;
+    border-bottom: 1px solid;
 }
 
 // hides the jump to featured listings link
@@ -214,6 +214,13 @@ h3.office-info-header {
 
 .office-info-pod {
     border-left: 3px solid $brand-third;
+    @include mobile_landscape {
+        text-align: center;
+        border-right: 3px solid #6adcb5;
+        h3.office-info-header {
+            text-align: center;
+        }
+    }
 }
 
 .custom-agent-content-wrapper {
@@ -251,7 +258,36 @@ a.development-links {
     margin: 0.5rem;
 }
 
+// a slight margin on the buttons for when they stack
+.btn-developments {
+    margin: 0.5rem 0;
+}
+
 // archive read more button wrapper
 .read-more-link {
     margin-top: 1rem;
+}
+
+// hides the metadata from blog posts
+section.entry-meta {
+    display: none;
+}
+
+// the tenant application page
+.tenant-app-wrapper-no-mobile {
+    display: none;
+    @media(min-width: $screen-sm) {
+        display: initial;
+    }
+}
+
+.tenant-app-wrapper-mobile {
+    @media(min-width: $screen-sm) {
+        display: none;
+    }
+}
+
+.tenant-download-button-wrapper {
+    text-align: center;
+    margin-top: 2rem;
 }
