@@ -1,5 +1,7 @@
 <?php
-  /* these are the buttons that appear at the bottom of the individual development pages */
+  /** 
+   * these are the buttons that appear at the bottom of the individual development pages 
+   */
 ?>
 <div class="container development-footer">
   <a class="btn btn-primary btn-developments" href="/contact/">Contact an Agent</a>

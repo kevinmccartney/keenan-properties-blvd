@@ -1,5 +1,7 @@
 <?php
-    /* this is mark-up for the custom copy on the agent roster archive */
+    /** 
+     * this is mark-up for the custom copy on the agent roster archive 
+     */
 ?>
 <div class="col-xs-12 custom-agent-content-wrapper">
     <div class="custom-agent-archive-top">
