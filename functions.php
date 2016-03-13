@@ -17,7 +17,7 @@ if ( !function_exists( 'hji_keenan_widgets_init' ) ) :
         unregister_sidebar( 'blvd-main-sidebarwidgets' );
         unregister_sidebar( 'blvd-topbar-sidebarwidgets' );
     }
-    add_action( 'widgets_init', 'hji_keenan_widgets_init' );
+    add_action( 'widgets_init', 'hji_keenan_widgets_init', 11 );
 endif;
 
 /**
