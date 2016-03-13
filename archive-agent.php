@@ -47,7 +47,7 @@ $params = array();
 global $team_query;
 
 // If Embedded Team was not requested - render header with alphabet and search filters
-if ( $team_query == false ) {
+if ( $team_query == false ) :
     // Template header
     echo '<section class="agents-archive">';
     echo '<article>';
@@ -69,7 +69,7 @@ FORM;
     // END Search Agent
 
     // Check if office ID was passed
-    if ( isset( $_GET['office_id'] ) ) {
+    if ( isset( $_GET['office_id'] ) ) :
         $office_name = get_post_meta( $_GET['office_id'], '_cmb_office_name', true );
 
         echo '<header class="header">';
@@ -87,7 +87,7 @@ FORM;
         echo '<div id="agent-roster-filters">';
         echo $agent_search_form;
         echo '</div>';
-    } else {
+    else :
         echo '<header class="page-header">';
         echo '<h1 class="page-title">Agent Roster</h1>';
         echo '</header>';
@@ -95,25 +95,27 @@ FORM;
 
         // this is the custom copy that is at the top of the page
         get_template_part( 'templates/partials/agent-page-custom-copy' );
+        
         echo '<div id="agent-roster-filters">';
 
         // BEGIN Agent Index (alphabet)
         $taxonomy = 'agent_index';
 
         // Save the terms that have posts in an array as a transient
-        if ( false === ( $alphabet = get_transient('archive_alphabet') ) ) {
+        if ( false === ( $alphabet = get_transient( 'archive_alphabet' ) ) ) :
 
             // It wasn't there, so regenerate the data and save the transient
-            $terms = get_terms($taxonomy);
+            $terms = get_terms( $taxonomy );
             $alphabet = array();
-            if ($terms) {
-                foreach ($terms as $term) {
+            
+            if ( $terms ) :
+                foreach ( $terms as $term ) {
                     $alphabet[] = $term->slug;
                 }
-            }
+            endif;
 
             set_transient( 'archive_alphabet', $alphabet );
-        }
+        endif;
         ?>
 
         <div id="archive-menu" class="row">
@@ -121,12 +123,13 @@ FORM;
             <ul id="agent-index">
                 <li class="menu-item"><a href="<?php echo get_post_type_archive_link( 'agent' ); ?>">All</a></li>
                 <?php
-                foreach ( range('a', 'z') as $i ) {
-                    $current = ( $i == get_query_var($taxonomy) ) ? "current-menu-item" : "menu-item";
-                    if ( in_array($i, $alphabet) ) {
-                        printf( '<li class="az-char %s"><a href="%s">%s</a></li>', $current, get_term_link($i, $taxonomy), strtoupper($i) );
+                foreach ( range( 'a', 'z' ) as $i ) {
+                    $current = ( $i == get_query_var( $taxonomy ) ) ? "current-menu-item" : "menu-item";
+                    
+                    if ( in_array( $i, $alphabet ) ) {
+                        printf( '<li class="az-char %s"><a href="%s">%s</a></li>', $current, get_term_link( $i, $taxonomy ), strtoupper( $i ) );
                     } else {
-                        printf( '<li class="az-char %s disabled"><a href="javascript: void(0)">%s</a></li>', $current, strtoupper($i) );
+                        printf( '<li class="az-char %s disabled"><a href="javascript: void(0)">%s</a></li>', $current, strtoupper( $i ) );
                     }
                 }
                 ?>
@@ -135,28 +138,30 @@ FORM;
 
         <?php
         echo '</div>'; // #agent-roster-filters
-    }
+    endif;
 
     // END Agent Index
 
     // Check if agent search was initiated
-    if ($search = get_search_query()) {
+    if ( $search = get_search_query() ) :
         $params['s'] = $search;
-    } else {
+    else :
         // Check if alphabet filter was initiated
         $agent_index = false;
-        if ( isset($wp_query->query_vars['agent_index']) && !empty($wp_query->query_vars['agent_index']) ) {
+        
+        if ( isset( $wp_query->query_vars['agent_index'] ) && !empty( $wp_query->query_vars['agent_index'] ) ) :
             $agent_index = $wp_query->query_vars['agent_index'];
-        }
+        endif;
+        
         $params['agent_index'] = $agent_index;
-    }
+    endif;
 
     // END check team_query
 
-    $params = array_merge($default_params, $params);
+    $params = array_merge( $default_params, $params );
 
     // Top Producers loop
-    if ( (is_tax('agent_index') || !is_tax()) && isset($topProducerSlug) && ($team_query == false) ) {
+    if ( ( is_tax('agent_index') || !is_tax() ) && isset( $topProducerSlug ) && ( $team_query == false ) ) :
         $topProducerParams = array(
             'tax_query' => array(
                 array(
@@ -168,35 +173,37 @@ FORM;
             ),
             'posts_per_page' => -1,
         );
-        $topProducerParams = array_merge($params, $topProducerParams);
-        $query = new \WP_Query($topProducerParams);
+        $topProducerParams = array_merge( $params, $topProducerParams );
+        $query = new \WP_Query( $topProducerParams );
 
         echo '<div class="top-producers">';
         include AGRO_PATH . 'templates/agents-loop.php';
         echo '</div>';
-    }
+    endif;
 
     // Standard posts loop - render content
-    if ( $team_query == false ) {
-        if ( is_tax() && !is_tax('agent_index') ) {
+    if ( $team_query == false ) :
+        
+        if ( is_tax() && !is_tax( 'agent_index' ) ) :
             // Regular taxonomy query
-            $query = new \WP_Query($default_params);
-        } else {
+            $query = new \WP_Query( $default_params );
+        else :
             // Query with possible index search or string search
-            $query = new \WP_Query($params);
-        }
-    } else {
+            $query = new \WP_Query( $params );
+        endif;
+
+    else :
         $query = $team_query;
-    }
+    endif;
 
     include AGRO_PATH . 'templates/agents-loop.php';
 
-    if ( $team_query == false ) {
+    if ( $team_query == false ) :
         echo '</article>';
 
         // this is the custom agent office info.
         get_template_part( 'templates/partials/agent-page-custom-office-info' );
 
         echo '</section>'; // class agents-archive
-    }
-}
+    endif;
+endif;
