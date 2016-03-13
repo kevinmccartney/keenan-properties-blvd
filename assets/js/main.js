@@ -2,7 +2,6 @@
  * Finds the OS of the user & appends it to the buttons on the CTA door
  * so that I can target them with specific CSS for positioning
  */
-<script>
 function chromeMacFill() {
     if ( jQuery('body').hasClass('find-properties') ) {
         var osBrowser      = window.navigator.appVersion.toLowerCase(),
@@ -22,7 +21,6 @@ function chromeMacFill() {
 jQuery(document).ready(function() {
     osBrowserFill();
 });
-</script>
 
 /**
  * Appends a small string indicating that the excerpt continues to all 
