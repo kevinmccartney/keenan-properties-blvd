@@ -3,19 +3,13 @@ a {
     @include transition(all 0.35s ease-in-out);
 }
 
-// background & positioning
-body:not(.home) #content {
-    margin: 2rem 0px;
-    padding: 2rem;
-    background-color: $white;
-}
-
 // hide social sharing icons except on rIDX single listings
 body:not(.ridx-single) {
     .addtoany_share_save_container {
         display: none;
     }
 }
+
 // hides the page titles from the following pages
 //  -   are you ready?
 //  -   tips to selling your home
@@ -49,7 +43,6 @@ input[type="email"],
 .tools-panel,
 .selectize-input {
     @include box-shadow((-3px) 3px 0 0 rgba(0, 0, 0, 0.18) !important);
-
     &:active,
     &:focus,
     &.focus {
@@ -59,12 +52,10 @@ input[type="email"],
 
 .tools-panel {
     border-radius: $border-radius-base;
-
     .btn,
     .add-to-favorites {
         @include box-shadow(none !important);
     }
-
     .btn-primary {
         line-height: initial;
     }
@@ -78,7 +69,7 @@ a.listing-title {
         text-decoration: none;
     }
     h4 {
-        color: $black;
+        color: $white;
         @include pretty_hover(none, $brand-third, ease 0.35s);
     }
 }
@@ -106,4 +97,10 @@ a.adv-options-toggle {
 
 .bold-brand-color {
     color: $brand-third;
+}
+
+// forces the save search button in the rIDX quicksearch
+// to have a grey background on IOS
+input.save-search-btn.btn {
+    background-color: #C0C0C0;
 }

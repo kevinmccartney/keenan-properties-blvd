@@ -11,7 +11,6 @@
 // pushing content below slideshow
 .blvd-home-widgets.row {
     margin-top: 80rem;
-
     @media (min-width: $screen-lg) {
         margin-top: 70rem;
     }
@@ -24,7 +23,6 @@
 
 .custom-cta-pod {
     text-align: center;
-
     @media (max-width: 991px) {
         margin-top: 5rem;
     }
@@ -44,6 +42,7 @@ a.custom-cta {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    background-color: $black;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -53,15 +52,12 @@ a.custom-cta {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background-color: $black;
     -webkit-transition: ease 0.5s;
     transition: ease 0.5s;
-
     &:hover,
     &:active,
     &:focus {
         background-color: $brand-primary;
-
         h3 {
             text-shadow: $brand-primary-dark-30 5px 5px 10px;
         }

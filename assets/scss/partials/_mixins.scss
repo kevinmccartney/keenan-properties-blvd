@@ -17,10 +17,10 @@
     transition: $pretty_trans;
     &:hover,
     &:active {
-        text-decoration: $pretty_decoration;
-        // text-shadow: $pretty_shadow;
         color: $pretty_color !important;
         // background-color: $pretty_bg_color !important;
+        text-decoration: $pretty_decoration;
+        // text-shadow: $pretty_shadow;
    
     }
 }

@@ -1,3 +1,10 @@
+// background & positioning
+body:not(.home) #content {
+    background-color: $white;
+    margin: 5rem auto;
+    padding: 2rem;
+}
+
 /*
  * BEGIN $are_you_ready
  * these styles govern the content on the "Are You Ready" page
@@ -14,14 +21,14 @@ img.are-you-ready-hero {
     font-size: 2rem;
 }
 
+// the large word at the beginning of every paragraph
 strong.are-you-ready-bold {
     font-size: 2.5rem;
 }
 
 img.are-you-ready-box-shadow {
     box-shadow: #666 10px 10px 20px;
-
-    // disables float so the titles don't get clipped or squished
+    // disables float so the titles dont get clipped or squished
     @media (max-width: 480px) {
         float: none;
     }
@@ -38,25 +45,23 @@ img.are-you-ready-box-shadow {
 
 .door-cta-wrapper.no-mobile {
     display: none;
-
-    @media (min-width: $screen-md) {
+    @media (min-width: $screen-lg) {
         display: block;
     }
 }
 
 .door-cta-wrapper.mobile {
-    @media (min-width: $screen-md) {
+    @media (min-width: $screen-lg) {
         display: none;
     }
 }
 
 // for the view above $screen-md
 .door-cta-background {
-    height: 612px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url('/wp-content/uploads/3_doors-e1445464951323.jpg');
-
+    background-image: url("/wp-content/uploads/3_doors-e1445464951323.jpg");
+    height: 612px;
     @media (min-width: $screen-lg) {
         height: 743px;
     }
@@ -70,24 +75,21 @@ img.are-you-ready-box-shadow {
 .door-cta-button-wrapper.no-mobile {
     display: block;
     padding-top: 20rem;
-
     a.door-cta-button.btn {
-        position: absolute;
-        border: 0;
-        width: 225px;
-        color: $white;
         background-color: transparent;
+        border: 0;
+        box-shadow: none !important;
+        color: $white;
         font-size: 3rem;
         font-weight: bold;
         letter-spacing: 1px;
+        position: absolute;
         text-transform: uppercase;
-        box-shadow: none !important;
-
+        width: 225px;
         @media (min-width: $screen-lg) {
             width: 250px;
         }
     }
-
     @media (min-width: $screen-lg) {
         padding-top: 26rem;
     }
@@ -96,7 +98,6 @@ img.are-you-ready-box-shadow {
 // these next 3 rules are for the text on the doors only visible above $screen-md
 #door-cta-for-lease {
     left: 5rem;
-
     @media (min-width: $screen-lg) {
         left: 7rem;
     }
@@ -104,7 +105,6 @@ img.are-you-ready-box-shadow {
 
 #door-cta-for-sale {
     left: 38rem;
-
     @media (min-width: $screen-lg) {
         left: 46.75rem;
     }
@@ -112,7 +112,6 @@ img.are-you-ready-box-shadow {
 
 #door-cta-open-house {
     right: 4.5rem;
-
     @media (min-width: $screen-lg) {
         right: 6rem;
     }
@@ -126,7 +125,6 @@ img.are-you-ready-box-shadow {
 .door-cta-button-pod a {
     margin-bottom: 2rem;
     width: 75%;
-
     @media (min-width: 480px) {
         width: 55%;
     }
@@ -148,7 +146,6 @@ img.are-you-ready-box-shadow {
 // ensures imgs are centered in geofarms
 .hji-areas-featured-image {
     text-align: center;
-
     img {
         margin: 2rem auto;
     }
@@ -165,9 +162,9 @@ img.custom-neighborhood {
 }
 
 .attractions-title {
+    border-bottom: 1px solid;
     margin-bottom: 2rem;
     text-align: left;
-    border-bottom: 1px solid;
 }
 
 // hides the jump to featured listings link
@@ -178,13 +175,13 @@ img.custom-neighborhood {
 // changes the body background color of all geofarm pages
 .single-hji_areas #wrapper {
     background-color: $black;
-
     // changes the content background to be a soft grey image
     #content {
-        background: url('/wp-content/uploads/soft_wallpaper.png') repeat scroll 0 0 $white;
+        background: url("/wp-content/uploads/soft_wallpaper.png") repeat scroll 0 0 $white;
     }
 }
 
+// the open house details above the secondary details in the rIDX single view
 #listing-details .main-details .open_house {
     background-color: transparent;
     color: $brand-primary !important;
@@ -205,6 +202,11 @@ div#agent-roster-filters {
     display: none;
 }
 
+// sizing the agent "pods" in the agents archive
+.post-type-archive .agent-data {
+    min-height: 165px;
+}
+
 h3.office-info-header {
     font-family: Open Sans;
     font-size: 21px;
@@ -215,8 +217,8 @@ h3.office-info-header {
 .office-info-pod {
     border-left: 3px solid $brand-third;
     @include mobile_landscape {
-        text-align: center;
         border-right: 3px solid #6adcb5;
+        text-align: center;
         h3.office-info-header {
             text-align: center;
         }
@@ -237,28 +239,30 @@ h3.office-info-header {
  */
 
 // chevernet condos post
-.developments-content-wrap {
-    text-align: center;
-}
+// .developments-content-wrap {
+//     text-align: center;
+// }
 
 // lofts content
 .so-styled {
     line-height: 2.5rem;
 }
 
-// developments landing page
+// developments landing page button wrapper
 .development-links-wrapper {
-    margin: 1rem auto;
     font-size: 1.5rem;
+    margin: 1rem auto;
     text-align: center;
 }
 
+// the buttons on the developments landing page
 a.development-links {
-    padding: 15px;
     margin: 0.5rem;
+    padding: 15px;
 }
 
-// a slight margin on the buttons for when they stack
+// a slight margin on the buttons on the single developments page 
+// for when they stack
 .btn-developments {
     margin: 0.5rem 0;
 }
@@ -276,13 +280,13 @@ section.entry-meta {
 // the tenant application page
 .tenant-app-wrapper-no-mobile {
     display: none;
-    @media(min-width: $screen-sm) {
+    @media (min-width: $screen-sm) {
         display: initial;
     }
 }
 
 .tenant-app-wrapper-mobile {
-    @media(min-width: $screen-sm) {
+    @media (min-width: $screen-sm) {
         display: none;
     }
 }

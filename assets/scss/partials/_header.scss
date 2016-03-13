@@ -12,18 +12,18 @@ a.hji-user-signup {
     color: $brand-third;
 }
 
+// the mobile toggle button
 header .header-widgets .blvd-logo button.navbar-toggle {
-    border: none;
     background-color: $brand-third;
+    border: none;
     &:hover,
     &active,
     &:focus {
         background-color: $brand-third-dark-20;
     }
-    
     // so the button doesn't sit directly on top of the logo
-    @media(max-width: $screen-xs) {
-        margin-bottom: 1rem !important;    
+    @media (max-width: $screen-xs) {
+        margin-bottom: 1rem !important;
     }
 }
 
@@ -42,7 +42,6 @@ header .header-widgets .blvd-logo button.navbar-toggle {
 // removing the float so the logo will center itself
 a.navbar-brand {
     float: none;
-
     @media (max-width: $screen-sm) {
         width: 75%;
     }
@@ -51,13 +50,13 @@ a.navbar-brand {
 // ensuring the logo does not overflow its container
 img#site-logo {
     max-width: 95%;
-    @media(max-width: 480px) {
+    @media (max-width: 480px) {
         margin-top: 1rem;
     }
 }
 
 .blvd-responsive-menu .navbar-nav {
-    @media(max-width: $grid-float-breakpoint) {
+    @media (max-width: $grid-float-breakpoint) {
         margin-bottom: 2rem;
     }
 }
@@ -69,25 +68,23 @@ img#site-logo {
 // this contact info is visible above $screen-md
 .custom-header-contact-wrapper.desktop {
     display: none;
-
     @media (min-width: $screen-lg) {
         display: initial;
-        position: absolute;
-        right: 15%;
-        z-index: 99;
         font-weight: 100;
         font-size: 18px;
+        position: absolute;
+        right: 15%;
         text-align: right;
+        z-index: 99;
     }
 }
 
-// this contact info is visbile below $screen-md
+// this contact info is visible below $screen-md
 .custom-header-contact-wrapper.mobile {
-    margin-bottom: 1rem;
     font-size: 16px;
-    text-align: center;
     font-weight: 100;
-
+    margin-bottom: 1rem;
+    text-align: center;
     @media (min-width: $screen-lg) {
         display: none;
     }
@@ -101,7 +98,6 @@ a.custom-contact {
     color: $white;
     -webkit-transition: ease 0.5s;
     transition: ease 0.5s;
-
     &:hover,
     &:active,
     &:focus {
@@ -111,8 +107,8 @@ a.custom-contact {
 }
 
 .fa-custom-social {
-    padding: 0px 5px;
     font-size: 1.5em;
+    padding: 0px 5px;
 }
 
 /**
@@ -121,16 +117,14 @@ a.custom-contact {
 
 ul.dropdown-menu {
     background-color: rgba($black, 0.65);
-    
     // hover behavior on menu dropdown items
     li > a {
         color: $white;
-
         &:hover,
         &:active,
         &:focus {
-            color: $brand-third;
             background-color: transparent !important;
+            color: $brand-third;
         }
     }
 }
