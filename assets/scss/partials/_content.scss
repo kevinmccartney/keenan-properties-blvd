@@ -117,6 +117,12 @@ img.are-you-ready-box-shadow {
     }
 }
 
+// this one is a special case- for some reason Chrome on Mac renders differently
+// than all other browsers
+#door-cta-for-sale.chrome.macintosh {
+    left: 42.75rem;
+}
+
 // these next 3 rules are for for the mobile view
 .door-cta-button-wrapper.mobile {
     text-align: center;
@@ -238,11 +244,6 @@ h3.office-info-header {
  * END $agent_archive
  */
 
-// chevernet condos post
-// .developments-content-wrap {
-//     text-align: center;
-// }
-
 // lofts content
 .so-styled {
     line-height: 2.5rem;
@@ -294,4 +295,41 @@ section.entry-meta {
 .tenant-download-button-wrapper {
     text-align: center;
     margin-top: 2rem;
+}
+
+// market reports "coming soon" text
+.coming-soon {
+    padding: 4rem;
+}
+
+// hero images on the mortgage calculator & home valuation pages 
+.hero-img-wrapper {
+    margin-bottom: 3rem;
+    @media(min-width: $screen-sm) {
+        width: 75%;
+        margin: 0 auto 5rem auto;
+    }
+}
+
+// the trusted vendors
+.vendor-company {
+    font-family: Open Sans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+// sizing the vendor item "pods"
+.grid-item {
+    width: 100%;
+    @media(min-width: $screen-sm) {
+        margin: 10px;
+        width: calc(50% - 20px);
+    }
+    @media(min-width: $screen-md) {
+        width: calc(33% - 20px);
+    }
+    @media(min-width: $screen-lg) {
+        // width: calc(25% - 20px);
+    }
 }

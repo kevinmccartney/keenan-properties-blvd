@@ -10,9 +10,13 @@
 
 // pushing content below slideshow
 .blvd-home-widgets.row {
-    margin-top: 80rem;
+    margin-top: 85rem;
     @media (min-width: $screen-lg) {
-        margin-top: 70rem;
+        margin-top: 80rem;
+    }
+    // targetting chrome only
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        margin-top: 75rem;
     }
 }
 
