@@ -2,16 +2,27 @@
  * Finds the OS of the user & appends it to the buttons on the CTA door
  * so that I can target them with specific CSS for positioning
  */
-function osFill() {
+<script>
+function chromeMacFill() {
     if ( jQuery('body').hasClass('find-properties') ) {
-        var os = navigator.platform,
+        var osBrowser      = window.navigator.appVersion.toLowerCase(),
         text = jQuery('.door-cta-wrapper.no-mobile .door-cta-button');
 
-        jQuery(text).each(function(index) {
-            jQuery(this).addClass(os);
-        });
+        if ( osBrowser.indexOf("macintosh") >= 0 && osBrowser.indexOf("chrome") >= 0 ) {
+            jQuery(text).each(function(index) {
+                jQuery(this).addClass('chrome');
+                jQuery(this).addClass('macintosh');
+            });
+        }
+        
     }
 }
+
+
+jQuery(document).ready(function() {
+    osBrowserFill();
+});
+</script>
 
 /**
  * Appends a small string indicating that the excerpt continues to all 
@@ -28,6 +39,6 @@ function blogBeautifier() {
 }
 
 jQuery(document).ready(function() {
-    osFill();
+    chromeMacFill();
     blogBeautifier();
 });
