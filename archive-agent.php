@@ -5,7 +5,7 @@ use \hji\AgentRoster\AgentRoster;
 $name_query = new WP_Query( array( 'post_type' => array( 'agent' ), 'posts_per_page' => -1 ) );
 $names = '<option></option>';
 
-while ( $name_query->have_posts() ) : $name_query->the_post();
+while( $name_query->have_posts() ) : $name_query->the_post();
     $names .= '<option>';
         $names .= get_the_title();
     $names .= '</option>';
@@ -24,8 +24,8 @@ $default_tax_query = array( // do not include top producers
     array(
         'taxonomy' => AgentRoster::AGENTS_TAXONOMY,
         'field' => 'slug',
-        'operator' => (get_query_var(AgentRoster::AGENTS_TAXONOMY)) ? 'IN' : 'NOT IN',
-        'terms' => (get_query_var(AgentRoster::AGENTS_TAXONOMY)) ? get_query_var(AgentRoster::AGENTS_TAXONOMY) : $topProducerSlug,
+        'operator' => ( get_query_var(AgentRoster::AGENTS_TAXONOMY) ) ? 'IN' : 'NOT IN',
+        'terms' => ( get_query_var(AgentRoster::AGENTS_TAXONOMY) ) ? get_query_var( AgentRoster::AGENTS_TAXONOMY ) : $topProducerSlug,
     )
 );
 $default_params = array(
@@ -47,7 +47,7 @@ $params = array();
 global $team_query;
 
 // If Embedded Team was not requested - render header with alphabet and search filters
-if ( $team_query == false ) :
+if( $team_query == false ) :
     // Template header
     echo '<section class="agents-archive">';
     echo '<article>';
@@ -69,7 +69,7 @@ FORM;
     // END Search Agent
 
     // Check if office ID was passed
-    if ( isset( $_GET['office_id'] ) ) :
+    if( isset( $_GET['office_id'] ) ) :
         $office_name = get_post_meta( $_GET['office_id'], '_cmb_office_name', true );
 
         echo '<header class="header">';
@@ -102,7 +102,7 @@ FORM;
         $taxonomy = 'agent_index';
 
         // Save the terms that have posts in an array as a transient
-        if ( false === ( $alphabet = get_transient( 'archive_alphabet' ) ) ) :
+        if( false === ( $alphabet = get_transient( 'archive_alphabet' ) ) ) :
 
             // It wasn't there, so regenerate the data and save the transient
             $terms = get_terms( $taxonomy );
@@ -123,15 +123,15 @@ FORM;
             <ul id="agent-index">
                 <li class="menu-item"><a href="<?php echo get_post_type_archive_link( 'agent' ); ?>">All</a></li>
                 <?php
-                foreach ( range( 'a', 'z' ) as $i ) {
+                foreach( range( 'a', 'z' ) as $i ) :
                     $current = ( $i == get_query_var( $taxonomy ) ) ? "current-menu-item" : "menu-item";
                     
-                    if ( in_array( $i, $alphabet ) ) {
+                    if( in_array( $i, $alphabet ) ) :
                         printf( '<li class="az-char %s"><a href="%s">%s</a></li>', $current, get_term_link( $i, $taxonomy ), strtoupper( $i ) );
-                    } else {
+                    else :
                         printf( '<li class="az-char %s disabled"><a href="javascript: void(0)">%s</a></li>', $current, strtoupper( $i ) );
-                    }
-                }
+                    endif;
+                endforeach;
                 ?>
             </ul>
         </div>
@@ -143,13 +143,13 @@ FORM;
     // END Agent Index
 
     // Check if agent search was initiated
-    if ( $search = get_search_query() ) :
+    if( $search = get_search_query() ) :
         $params['s'] = $search;
     else :
         // Check if alphabet filter was initiated
         $agent_index = false;
         
-        if ( isset( $wp_query->query_vars['agent_index'] ) && !empty( $wp_query->query_vars['agent_index'] ) ) :
+        if  isset( $wp_query->query_vars['agent_index'] ) && !empty( $wp_query->query_vars['agent_index'] ) ) :
             $agent_index = $wp_query->query_vars['agent_index'];
         endif;
         
@@ -161,7 +161,7 @@ FORM;
     $params = array_merge( $default_params, $params );
 
     // Top Producers loop
-    if ( ( is_tax('agent_index') || !is_tax() ) && isset( $topProducerSlug ) && ( $team_query == false ) ) :
+    if( ( is_tax('agent_index') || !is_tax() ) && isset( $topProducerSlug ) && ( $team_query == false ) ) :
         $topProducerParams = array(
             'tax_query' => array(
                 array(
@@ -182,9 +182,9 @@ FORM;
     endif;
 
     // Standard posts loop - render content
-    if ( $team_query == false ) :
+    if( $team_query == false ) :
         
-        if ( is_tax() && !is_tax( 'agent_index' ) ) :
+        if( is_tax() && !is_tax( 'agent_index' ) ) :
             // Regular taxonomy query
             $query = new \WP_Query( $default_params );
         else :
@@ -198,7 +198,7 @@ FORM;
 
     include AGRO_PATH . 'templates/agents-loop.php';
 
-    if ( $team_query == false ) :
+    if( $team_query == false ) :
         echo '</article>';
 
         // this is the custom agent office info.
