@@ -4,15 +4,15 @@
  * the 'available-properties' or 'past projects' post categories
  */
 
-while ( have_posts() ) : the_post();
-	
-	echo '<article id="post-' . the_ID(); . post_class(); . '">';
-  		
-  		get_template_part( 'templates/entry-single', get_post_type() );
-	
-	echo '</article>' 
+while ( have_posts() ) : the_post(); ?>
 
-endwhile;
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+        <?php get_template_part( 'templates/entry-single', get_post_type() ); ?>
+
+    </article>
+
+<?php endwhile;
 
 if( in_category( array( 'available-properties', 'past projects' ) ) ) :
 	
