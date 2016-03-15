@@ -14,8 +14,8 @@ a.hji-user-signup {
 
 // the mobile toggle button
 header .header-widgets .blvd-logo button.navbar-toggle {
+    @include no_borders;
     background-color: $brand-third;
-    border: none;
     &:hover,
     &active,
     &:focus {

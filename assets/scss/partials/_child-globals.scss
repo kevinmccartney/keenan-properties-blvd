@@ -104,3 +104,10 @@ a.adv-options-toggle {
 input.save-search-btn.btn {
     background-color: #C0C0C0;
 }
+
+// overriding button margins in quicksearch wrapper
+.quick-search-widget-wrapper.horizontal .hji-action-buttons-wrap {
+    @media(min-width: $screen-sm) {
+        margin-top: 0;
+    }
+}
