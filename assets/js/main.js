@@ -17,11 +17,6 @@ function chromeMacFill() {
     }
 }
 
-
-jQuery(document).ready(function() {
-    osBrowserFill();
-});
-
 /**
  * Appends a small string indicating that the excerpt continues to all 
  * post excerpts in an archive
