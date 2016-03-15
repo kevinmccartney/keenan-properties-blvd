@@ -7,7 +7,7 @@ function chromeMacFill() {
         var osBrowser      = window.navigator.appVersion.toLowerCase(),
         text = jQuery('.door-cta-wrapper.no-mobile .door-cta-button');
 
-        if ( osBrowser.indexOf("macintosh") >= 0 && osBrowser.indexOf("chrome") >= 0 ) {
+        if ( osBrowser.indexOf("macintosh") > -1 && osBrowser.indexOf("chrome") > -1 ) {
             jQuery(text).each(function(index) {
                 jQuery(this).addClass('chrome');
                 jQuery(this).addClass('macintosh');
